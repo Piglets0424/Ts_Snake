@@ -1,0 +1,75 @@
+//清除默认样式
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 360px;
+    height: 420px;
+    margin: 100px auto;
+    background-color: #b7d4a8;
+    border: 10px solid black;
+    border-radius: 20px;
+
+    .main {
+        width: 304px;
+        height: 304px;
+        margin: 20px auto;
+        border: 2px solid black;
+        position: relative;
+
+        // 蛇
+        #snake {
+            div {
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+                border: 1px solid #b7d4a8;
+                // 开启绝对定位
+                position: absolute;
+            }
+        }
+
+        // 食物
+        #food {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            left: 10px;
+            top: 50px;
+            width: 10px;
+            height: 10px;
+            justify-content: space-between;
+            align-content: space-between;
+
+            div {
+                width: 4px;
+                height: 4px;
+                transform: rotateZ(45deg);
+                background-color: rgb(222, 38, 38);
+            }
+        }
+    }
+
+    div {
+        font-family: Courier;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    & >:nth-child(2) {
+        float: left;
+        margin-left: 18px;
+
+        span {
+            margin: 0;
+        }
+    }
+
+    & >:last-child {
+        float: right;
+        margin-right: 18px;
+    }
+}
